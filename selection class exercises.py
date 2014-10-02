@@ -1,26 +1,38 @@
 #Ricky Santos
 #selection class exercises improvments
-#30/9/2014
+#2/10/2014
+
+century = int(input("please select your century; 20th or 21st: "))
+
+if century == 20:
+    century = "1900"
+elif century == 21:
+    century = "2000"
+else:
+    print ("That is an invalid century for this program")
+###########################################################################
 
 day = int(input("please enter a day as a number between 1 - 31: "))
-month = int(input("Please enter a month as a number between 1-12: "))
-year = int(input("please entre the last two numbers of the year"))
+day_suffix = day
 
-if day == 1 or day == 21 or day == 31:
-    day_after == "st"
-if day == 2 or day == 22:
-    day_after == "nd"
-if day == 3 or day == 23:
-    day_after == "rd"
+if day_suffix == 1 or day_suffix == 21 or day_suffix == 31:
+    day_suffix = "st"
+elif day_suffix == 2 or day_suffix == 22:
+    day_suffix = "nd"
+elif day_suffix == 3 or day_suffix == 23:
+    day_suffix = "rd"
 else:
-    day_after == "th"
+    day_suffix = "th"
+###########################################################################
+
+month = int(input("Please enter a month as a number between 1-12: "))
 
 if month == 1:
     month = "January"
 elif month == 2:
     month = "February"
 elif month == 3:
-    print"March"
+    month = "March"
 elif month == 4:
     month = "April"
 elif month == 5:
@@ -41,4 +53,14 @@ elif month == 12:
     month = "December"
 else:
     print ("there isn't that many months in the year")
+###########################################################################
 
+year = int(input("please entre the last two numbers of the year: "))
+
+
+###########################################################################
+
+complete_year = (century + year)
+###########################################################################
+
+print ("{0},{1}{2},".format(month,day,day_suffix))
