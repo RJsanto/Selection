@@ -86,9 +86,9 @@ while True:
 
 #########################################
 
-    endProgram =  input("Do you wish to end the program? (Enter no to process a new set of dates): ")
+    endProgram =  input("Do you wish to end the program? (Enter anykey to process a new set of dates or yes to kill the program): ")
 
-    time.sleep (2)
+    time.sleep (1)
     
     if endProgram == "yes":
         break
